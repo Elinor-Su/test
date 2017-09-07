@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = 'pwwkew';
+   /* var lengthOfLongestSubstring = function (s) {
+        var newStr = "",arrAll = [], lengthAll = s.length-1;
+        var srtfunc = function (s) {
+            if(lengthAll == arrAll.join('').length){
+                return;
+            }
+            for (var i = 0; i < s.length; i++) {
+                if (newStr.indexOf(s[i]) === -1) {
+                    newStr += s[i]
+                } else {
+                    arrAll.push(newStr);
+                    var news = s.split(newStr)[1];
+                    newStr = "";
+                    srtfunc(news);
+                }
+            }
+        };
+        srtfunc(s);
+        console.log(arrAll);
+    };
+    lengthOfLongestSubstring(str);*/
+
+
+
+
+
+
+
+
+
+
+    var lengthOfLongestSubstring = function (s) {
+        var newStr = "",arrAll = [], lengthAll = s.length;
+        var srtfunc = function (s) {
+            if(lengthAll == arrAll.join('').length){
+                return;
+            }
+            for (var i = 0; i < s.length; i++) {
+                if (newStr.indexOf(s[i]) === -1) {
+                    newStr += s[i]
+                } else {
+                    arrAll.push(newStr);
+                    var news = s.split(newStr)[1];
+                    newStr = "";
+                    srtfunc(news);
+                }
+            }
+        };
+        srtfunc(s);
+        console.log(arrAll);
+    };
+    lengthOfLongestSubstring(str);
+
+</script>
+
+</body>
+</html>
